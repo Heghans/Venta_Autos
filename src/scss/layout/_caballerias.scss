@@ -1,0 +1,64 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.contenido-caballerias{
+    background-color: v.$negro;
+    padding: 5rem 0;
+    text-align: center;
+    margin: 0rem;
+    color: v.$blanco;
+
+   
+    p{
+        color: v.$blanco;
+        font-size: 1.5rem;
+        margin: 5rem;
+    }
+
+   
+
+    .imagenes-caballerias {
+        margin-top: 10rem;
+        padding: 2rem;
+
+        @include m.telefono{
+        @include m.grid(1, 2rem);
+        }
+
+        @include m.tablet{
+        @include m.grid(2, 2rem);}
+        
+
+        img{
+            margin-top: 2rem;
+  
+            width: 150rem;
+            height: auto;
+        }
+    
+    }
+    
+    .texto-caballeria{
+        h2{
+            margin: 1rem;
+            font-weight: 300;
+            font-size: 1.8rem;
+            @include m.tablet{
+                
+                font-weight: 300;        
+                margin: 5rem;
+                font-size: 3rem;
+            }
+        }
+        h4{
+            font-size: 1.8rem;
+            font-weight: 200;
+        }
+           
+    }
+}
+.iconos-caballerias{
+    display:inline-block;
+    padding: 2rem;
+}

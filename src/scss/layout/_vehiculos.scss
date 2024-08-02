@@ -1,0 +1,133 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.contenido-vehiculos {
+    .titulo-vehiculos {
+        font-size: 5rem;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 8rem;
+        margin-bottom: 3rem;
+        margin-left: 10rem;
+
+        @include m.desktop {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    .titulo-lista {
+        h1 {
+            padding-top: 17.5rem; /* Ajuste específico para mantener espacio adecuado */
+            @include m.tablet {
+                text-align: left;
+                margin-left: 10rem;
+            }
+            text-align: center;
+            font-weight: 300;
+            margin-top: 5rem;
+            font-size: 4rem;
+        }
+    }
+
+    .lista-vehiculos {
+        display: grid;
+        gap: 4rem;
+        margin: 8rem;
+        margin-left: 10rem;
+
+        @include m.telefono {
+            @include m.grid(1, 4rem);
+        }
+        @include m.tablet {
+            @include m.grid(2, 4rem);
+        }
+        @include m.desktop {
+            @include m.grid(4, 4rem);
+        }
+    }
+
+    .vehiculo {
+        h4 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 350;
+            margin: 2rem;
+        }
+        p {
+            color: v.$negro;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        border-radius: 2px; /* Asegúrate de especificar unidades para el radio */
+        padding: 1rem;
+        text-align: center;
+
+        @include m.tablet {
+            img {
+                display: inline-block;
+                align-items: center;
+                width: 80%;
+                height: 50%;
+                object-fit: contain;
+                position: relative;
+            }
+        }
+    }
+}
+
+
+.navegacion-vehiculos {
+    background-color: v.$blanco;
+    display: block;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    @include m.tablet {
+        // Código de la barra fija
+        &.fijo {
+            top: 6;
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            background-color: #ffffff; /* Color de fondo del navbar */
+            z-index: 1000; /* Asegura que el navbar esté en la parte superior */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+            transition: top 0.7s ease-in-out; /* Transición suave al cambiar la posición */
+        }
+    }
+
+    a {
+        margin: 0.8rem;
+       
+        @include m.tablet {
+            margin: 1.4rem;
+        }
+    }
+
+    @include m.desktop {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+
+        a {
+            margin: 1rem;
+            margin-bottom: -5rem;
+        }
+
+        a:first-child {
+            margin-left: 10rem;
+        }
+    }
+}
+.navbar-hidden {
+    
+    top: -4.5rem; /* Mueve el navbar fuera de la pantalla cuando está oculto */
+    transition: top 0.7s ease-in-out;
+  }

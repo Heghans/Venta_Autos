@@ -1,0 +1,85 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.titulo-contacto{
+    
+    @include m.desktop{
+      display: flex;
+    }
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    color: v.$blanco;
+    
+    justify-content: center;
+    background-color: v.$negro;
+    h3{
+        font-weight: 300;
+        font-size: 3rem;
+        margin: 0 4rem;
+    }
+   
+    img{
+    pointer-events: none;
+    margin: 0 10rem;
+    height: auto;
+    width: 35%; 
+    }
+}
+
+
+.contenido-formulario{
+    @include m.grid(1, 4rem);
+
+    @include m.tablet{
+    @include m.grid(2, 4rem);}
+    justify-content: center;
+    
+    padding: 5rem 0;
+    align-items: center;
+    text-align: center;
+    color: v.$negro;
+    margin: 7rem;
+    font-weight: 300;
+    h1{
+        font-weight: 300;
+    }
+
+    legend{
+        color: gray;
+    }
+
+    label{
+        text-align: left;
+        font-weight: 700rem;
+        text-transform: uppercase;
+        display: block;
+    }
+    input:not([type="submit"]), 
+    textarea{
+        
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: v.$fondotextAreas;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        
+    }
+
+}
+.contenido-formulario{
+    form{
+        background-color: v.$fondoForm;
+        padding: 5rem 5rem;
+        border-radius: 2rem;
+    }
+
+}
+.enviar{
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}

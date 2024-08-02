@@ -1,0 +1,22 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.border-blue{
+margin-top: 2rem;
+border-bottom: 2px solid rgb(7, 79, 143);
+
+}
+.border-white{
+margin-top: 2rem;
+border-bottom: 2px solid rgb(255, 255, 255);
+}
+.border-red{
+margin-top: 2rem;
+border-bottom: 2px solid rgb(198, 42, 42);
+}
+
+.border-gray{
+border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    }
+

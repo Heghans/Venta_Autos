@@ -1,0 +1,40 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.titulo-nosotros{
+    justify-content: center;
+    text-align: center;
+    margin-top: 4rem;
+    h1, h2{
+        margin: 0;
+        font-size: 3.5rem;
+        font-weight: 300;
+    }
+    h4{
+        font-family: v.$funteSecundaria;
+        font-weight: 500;
+    }
+}
+.contenido-nosotros{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 0;
+    margin: 4rem 8rem;
+    gap: 3rem;
+    @include m.tablet{
+        display: flex;
+    }
+}
+
+.icono-nosotros{
+    h1{
+        font-size: 3.5rem;
+        font-weight: 200;
+    }
+    p{
+        font-family: v.$funteSecundaria;
+        color: v.$negro;
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "venta_autos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fslightbox": "^3.4.1",
+    "glob": "^10.3.12",
+    "gulp": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.75.0",
+    "scrollreveal": "^4.0.9",
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1"
+  }
+}

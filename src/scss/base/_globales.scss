@@ -1,0 +1,68 @@
+// Importaciones de mixins y variables
+@use 'variables' as v;
+@use '../base/mixins' as m;
+
+html {
+    font-size: 62.5%; // Establecer el tamaño de fuente base a 10px para facilitar los cálculos de em/rem
+    box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuentePrincipaL; // Utilizar la variable de fuente principal definida en 'variables'
+    font-size: 1.6rem; // Tamaño de fuente base en rem
+
+    @include m.tablet {
+        &.body-scroll{
+            padding-top: 2.6rem ;
+        }
+    }
+}
+
+p {
+    font-size: 2rem;
+    color: v.$negro;
+    line-height: 1.5; // Aumentar el tamaño de la línea de texto
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; // Centrar el contenido dentro del contenedor
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0 0 5rem 0; // Añadir margen inferior a los títulos principales
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+span {
+    color: v.$grisbg; // Utilizar la variable de color gris de fondo definida en 'variables'
+}
+
+img {
+    max-width: 100%; // Hacer las imágenes responsivas
+    width: 100%;
+    height: auto;
+    display: block;
+}

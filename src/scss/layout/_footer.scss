@@ -1,0 +1,44 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.footer{
+    padding: 5rem 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    .titulo-nav {
+        color: v.$negro;
+        font-weight: 300;
+        margin: 3rem;
+          font-size: 5rem;
+          margin: 3rem;
+      }
+
+    .navegacion-footer{
+      
+            display: none;
+        
+
+        margin: 3rem;
+
+        a {
+            font-size: 2rem;
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: v.$negro;
+            font-weight: 600;    
+          }
+        @include m.tablet{
+            display: block;
+        }
+        @include m.desktop {
+          justify-content: space-between;
+          display: flex;
+         
+          gap: 5rem;
+        }
+      
+   
+    }
+}
+

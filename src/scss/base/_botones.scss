@@ -1,0 +1,36 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+
+
+
+.boton-principal {  
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-top: 0;
+    padding: 1rem 2rem;
+    color: rgb(155, 155, 155);
+    text-decoration: none;
+    border: 2.2px solid ;
+    transition: color 0.3s ease
+   
+}
+
+.boton-contacto {  
+    cursor: pointer;
+    border-radius: 1rem;
+    color: v.$blanco;
+    font-size: 2.5rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0;
+    padding: 2rem 4rem;
+    background-color: v.$negro;
+    text-decoration: none;
+    
+
+}
+.boton-principal:hover{
+    color: v.$negro;
+}

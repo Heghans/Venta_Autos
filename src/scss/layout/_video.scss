@@ -1,0 +1,45 @@
+// Importar mixins y variables
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.video {
+    // El contenedor del video ocupa toda la ventana del navegador
+    position: relative;
+    width: 100%;
+    height: 100vh; // Ocupa toda la altura de la ventana
+    overflow: hidden; // Oculta cualquier contenido desbordado
+
+    video {
+        // El video se posiciona de manera absoluta para cubrir todo el contenedor
+        position: absolute;
+        top: 50%; // Centra verticalmente
+        left: 50%; // Centra horizontalmente
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Asegura que el video cubra el contenedor sin deformarse
+        transform: translate(-50%, -50%); // Ajusta el video para centrarse correctamente
+        pointer-events: none; // Deshabilita la interacción del usuario con el video
+    }
+}
+
+.contenido-video {
+    // Posiciona el contenido del video centrado sobre el video
+    position: absolute;
+    top: 50%; // Centra verticalmente
+    left: 50%; // Centra horizontalmente
+    transform: translate(-50%, -50%); // Ajusta el contenido para centrarse correctamente
+    color: white; // Color del texto, se puede ajustar según sea necesario
+    text-align: center; // Centra el texto
+    z-index: 1; // Asegura que el contenido esté por encima del video
+
+    h2 {
+        gap: 2rem;
+        font-size: 4rem; // Tamaño de la fuente del título
+        margin-bottom: 1rem; // Espacio inferior del título
+    }
+
+    p {
+        color:  v.$blanco;
+        font-size: 1.2rem; // Tamaño de la fuente del párrafo
+    }
+}
