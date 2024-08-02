@@ -1,0 +1,1 @@
+This is a personal project excluding my portfolio, with plans to integrate a back-end in the future. The focus is on achieving an excellent UX/UI design and consolidating my skills using the best front-end technologies available. In the future, it will be necessary to incorporate React to utilize its Hooks and components.
